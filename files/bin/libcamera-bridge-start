@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+sudo -n /usr/bin/modprobe -r v4l2loopback 2>/dev/null || true
+sudo -n /usr/bin/modprobe v4l2loopback exclusive_caps=1 video_nr=32 card_label="Libcamera Bridge"
+for i in {1..100}; do [[ -e /dev/video32 ]] && break; sleep 0.05; done
+[[ -e /dev/video32 ]] || { echo "/dev/video32 fehlt" >&2; exit 1; }
+systemctl --user start libcamera-v4l2bridge.service
