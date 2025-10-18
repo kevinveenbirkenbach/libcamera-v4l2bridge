@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+systemctl --user stop libcamera-v4l2bridge.service || true
+sudo -n /usr/bin/modprobe -r v4l2loopback || true
