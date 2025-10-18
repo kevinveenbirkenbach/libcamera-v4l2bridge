@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Stop Libcamera Bridge
+Comment=Stop libcamera → v4l2loopback bridge (turn off camera)
+Exec=/home/$(whoami)/.local/bin/libcamera-bridge-stop
+Icon=process-stop
+Terminal=false
+Type=Application
+Categories=Video;Utility;
+StartupNotify=true
