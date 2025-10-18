@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Start Libcamera Bridge
+Comment=Start libcamera → v4l2loopback bridge
+Exec=/home/$(whoami)/.local/bin/libcamera-bridge-start
+Icon=media-playback-start
+Terminal=false
+Type=Application
+Categories=Video;Utility;
+StartupNotify=true
