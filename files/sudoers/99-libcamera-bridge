@@ -1,0 +1,1 @@
+kevinveenbirkenbach ALL=(ALL) NOPASSWD: /usr/bin/modprobe v4l2loopback, /usr/bin/modprobe -r v4l2loopback
